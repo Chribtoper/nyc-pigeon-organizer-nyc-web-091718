@@ -26,10 +26,10 @@ def nyc_pigeon_organizer(data)
         hash[bird] = {}
       end
         if hash[bird][symbol].nil?
-        hash[name][symbol] ||= []
-        hash[name][symbol] << attribute.to_s
+        hash[bird][symbol] ||= []
+        hash[bird][symbol] << attribute.to_s
         else
-        hash[name][symbol] << attribute.to_s
+        hash[bird][symbol] << attribute.to_s
         end
       end
     end
