@@ -20,12 +20,12 @@ data = {
 def nyc_pigeon_organizer(data)
   hash = {}
   data.each do |symbol, hash_data|
-    hash_data.each do |attribute, name|
-      name.each do |bird|
-      if hash[name].nil?
-        hash[name] = {}
+    hash_data.each do |attribute, names|
+      names.each do |bird|
+      if hash[bird].nil?
+        hash[bird] = {}
       end
-        if hash[name][symbol].nil?
+        if hash[bird][symbol].nil?
         hash[name][symbol] ||= []
         hash[name][symbol] << attribute.to_s
         else
